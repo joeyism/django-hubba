@@ -1,0 +1,3 @@
+[submodule "hubba_products"]
+	path = hubba_products
+	url = https://github.com/joeyism/py-hubba-products.git
