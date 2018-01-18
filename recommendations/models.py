@@ -18,3 +18,6 @@ class Action(models.Model):
     context_product = models.CharField(max_length=128)
     no_of_actions = models.IntegerField()
 
+class Recommendation(models.Model):
+    user_id = models.CharField(max_length=32)
+
