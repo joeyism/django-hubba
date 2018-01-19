@@ -1,0 +1,20 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+
+<html>
+    <head>
+        {{ product_name}}
+    </head>
+
+    <body>
+        <div class="title">{{ product_name }}</div>
+        <div class="row">
+            <div class="col-md-6 image">
+                <img src={{ picture_url}}>
+            </div>
+            <div class="col-md-6 description">{{ description }}</div>
+        </div>
+
+    </body>
+
+</html>

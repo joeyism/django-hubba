@@ -19,5 +19,9 @@ class Action(models.Model):
     no_of_actions = models.IntegerField()
 
 class Recommendation(models.Model):
+    buyer = models.ForeignKey(Buyer, on_delete=models.DO_NOTHING)
+    product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
     user_id = models.CharField(max_length=32)
+    context_product = models.CharField(max_length=128)
+
 
