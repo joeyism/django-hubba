@@ -15,7 +15,11 @@ def product_details(request, name):
 def buyer_details(request, owner):
     buyer = get_object_or_404(Buyer, owner=owner)
     recomm_list = get_list_or_404(Recommendation, buyer=buyer)
-    return render(request, "buyer_details.html", model_to_dict(buyer))
+    return render(
+        request,
+        "buyer_details.html",
+        dict(model_to_dict(buyer), **{"recommendations": recomm_list})
+    )
 
 
 

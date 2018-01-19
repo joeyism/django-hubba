@@ -1,18 +1,27 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 
+{% load static %}
+
 <html>
     <head>
-        {{ product_name}}
+        <title>
+            {{ product_name}}
+        </title>
+        <link rel="stylesheet" href="/static/styles.css"/>
     </head>
 
     <body>
-        <div class="title">{{ product_name }}</div>
-        <div class="row">
-            <div class="col-md-6 image">
-                <img src={{ picture_url}}>
+        <div class="page">
+            <div class="title-container">
+                <div class="title">{{ product_name }}</div>
             </div>
-            <div class="col-md-6 description">{{ description }}</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="image" src={{ picture_url}}>
+                </div>
+                <div class="col-md-8 description">{{ description }}</div>
+            </div>
         </div>
 
     </body>

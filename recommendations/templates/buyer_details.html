@@ -1,16 +1,30 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 
+{% load static %}
+
 <html>
     <head>
-        {{ name }}
+        <title>{{ name }}</title>
+
+        <link rel="stylesheet" href="/static/styles.css"/>
     </head>
 
     <body>
-        <div class="title">{{ name }}</div>
-        <div class="col-md-6 description">{{ description }}</div>
-        <div class="recommendations">
+        <div class="page">
+            <div class="title-container">
+                <div class="title">{{ name }}</div>
+            </div>
+            <div class="description">{{ description }}</div>
 
+            <div class="recommendations">
+                <div class="sub-title">Recommendations</div>
+                {% for recommendation in recommendations %}
+                <a href="/product/{{ recommendation.product.name}}">
+                    <img class="recomm-tiny-image img-thumbnail" src={{ recommendation.product.picture_url}}>
+                </a>
+                {% endfor%}
+            </div>
         </div>
 
     </body>

@@ -1,0 +1,40 @@
+
+.page{
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:2%;
+}
+.title{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.image{
+    width:80%;
+    border: 1px solid black
+}
+
+.description{
+    font-size: 16px;
+    color: #364751;
+
+}
+
+.title-container{
+    margin-bottom: 2%;
+}
+
+.recomm-tiny-image{
+    border: 1px solid black;
+    width: 15%;
+}
+
+.sub-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom:2%;
+}
+
+.recommendations{
+    margin-top:3%;
+}
