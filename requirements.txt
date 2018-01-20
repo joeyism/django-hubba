@@ -1,0 +1,7 @@
+numpy
+pandas
+lxml
+django-bootstrap3
+selenium
+requests
+scikit-surprise
