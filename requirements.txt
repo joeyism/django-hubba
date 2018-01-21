@@ -5,4 +5,3 @@ django
 django-bootstrap3
 selenium
 requests
-scikit-surprise
