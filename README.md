@@ -24,6 +24,16 @@ Install the python dependencies through pip with
 pip3 install -r requirements.txt
 ```
 
+## I Just Want To RUN IT
+If you don't want to read the documents and just want it to run, run `prod.sh` by
+
+```bash
+bash prod.sh
+```
+
+## Download CSV Files
+Due to size limitations, you must download prods, actions, and buyers csv file and move them into `hubba_products/` as they weren't uploaded into Github
+
 ## Setup
 Setup the database by running
 
@@ -62,4 +72,3 @@ python3 hubba_products/scraper.py hubba_products/prods_scraped.csv --headless
 
 ## Database
 Running migrations and load automatically adds it to a SQLite3 local database. To save it into a Postgresql database, remove the `hubba/local_settings.py` file.
-
