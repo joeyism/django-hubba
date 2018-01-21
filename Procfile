@@ -1,1 +1,1 @@
-web: gunicorn hubba.wsgi --log-file -
+web: gunicorn hubbaproductdemo.wsgi --log-file -
