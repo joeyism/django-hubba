@@ -8,3 +8,4 @@ requests
 django-extensions
 psycopg2
 dj_database_url
+gunicorn
