@@ -1,6 +1,7 @@
 numpy
 pandas
 lxml
+django
 django-bootstrap3
 selenium
 requests

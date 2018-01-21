@@ -38,3 +38,28 @@
 .recommendations{
     margin-top:3%;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+}
+
+td {
+    padding-top: 1% !important;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-spacing: 5px;
+}
+
+tr {
+    margin-bottom: 2px;
+}

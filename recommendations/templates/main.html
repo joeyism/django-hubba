@@ -1,0 +1,44 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+
+{% load static %}
+
+<html>
+    <head>
+        <title>Hubba Buyers</title>
+
+        <link rel="stylesheet" href="/static/styles.css"/>
+    </head>
+
+    <body>
+        <div class="page">
+            <div class="title-container">
+                <div class="title">Hubba Buyers</div>
+            </div>
+
+            <div class="all-buyers">
+                <table class="table table-hover" style="table-layout: fixed; width:100%">
+                    <tr>
+                        <th>Buyer</th>
+                        <th>Description</th> 
+                    </tr>
+                    {% for buyer in buyers %}
+                    {% if buyer.name != "nan" %}
+                    <tr style="margin-bottom: 1%">
+                        <td style="word-wrap: break-word">
+                            <a class="each-row" href="/buyer/{{ buyer.owner }}">
+                                {{ buyer.name }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ buyer.description }}
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor%}
+            </div>
+        </div>
+
+    </body>
+
+</html>

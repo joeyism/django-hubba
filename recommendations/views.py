@@ -8,6 +8,10 @@ from .models import Product, Buyer, Recommendation
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
+def main(request):
+    buyers = get_list_or_404(Buyer)
+    return render(request, "main.html", { "buyers": buyers})
+
 def product_details(request, name):
     product = get_object_or_404(Product, name=name)
     return render(request, "product_details.html", model_to_dict(product))

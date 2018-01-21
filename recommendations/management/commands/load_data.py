@@ -5,7 +5,10 @@ from django.core.management.base import BaseCommand, CommandError
 
 def load_data():
     prods = data.get_prods()
+    print("\nLoading products")
+    N = prods.shape[0]
     for i, row in prods.iterrows():
+        print("\r{}/{}\t".format(i+1, N), end="")
         product = Product(
             name = row["name"],
             picture_url = row["picture"],
@@ -15,7 +18,10 @@ def load_data():
         product.save()
 
     buyers = data.get_buyers()
+    print("\n\nLoading buyers")
+    N = buyers.shape[0]
     for i, row in buyers.iterrows():
+        print("\r{}/{}\t".format(i+1, N), end="")
         buyer = Buyer(
             owner = row["owner"],
             name = row["name"],
@@ -24,7 +30,10 @@ def load_data():
         buyer.save()
 
     actions = data.get_actions()
+    print("\n\nLoading actions")
+    N = actions.shape[0]
     for i, row in actions.iterrows():
+        print("\r{}/{}\t".format(i+1, N), end="")
         buyer = Buyer.objects.get(owner=row["user_id"])
         product = Product.objects.get(name=row["context_product"])
         action = Action(
