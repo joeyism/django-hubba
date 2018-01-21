@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'hubba.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'hubba_products',
-            'USER': 'hubba_products',
+            'NAME': 'hubbaproductsdemo',
+            'USER': 'hubbaproductsdemo',
             'PASSWORD': '',
             'HOST': 'localhost',
             'PORT': '',
