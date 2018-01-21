@@ -1,10 +1,10 @@
 from django.db import models
 
 class Product(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=512)
     picture_url = models.CharField(max_length=512)
     description = models.TextField()
-    product_name = models.CharField(max_length=128)
+    product_name = models.CharField(max_length=512)
 
 class Buyer(models.Model):
     owner = models.CharField(max_length=32)
